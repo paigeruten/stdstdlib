@@ -1,46 +1,39 @@
 section=Sym calls=[Sym] example(s)=Str?
 
-:string.append.char {String.push}
-:string.append.string {String.push_str}
-:string.capacity {String.capacity}
-:string.capacity.reserve {String.reserve String.reserve_exact}
-:string.capacity.shrink {String.shrink_to_fit}
-:string.case.lower {str.to_lowercase}
-:string.case.upper {str.to_uppercase}
-:string.clear {String.clear}
-:string.compare {str.cmp}
-:string.compare.equal {str.==}
-:string.compare.equal.ignore_case {str.eq_ignore_ascii_case}
-:string.compare.not_equal {str.==}
-:string.compare.greater {str.>}
-:string.compare.greater_or_equal {str.>=}
-:string.compare.less {str.<}
-:string.compare.less_or_equal {str.<=}
+:string.append {String.push_str}
+:string.push {String.push}
+:string.insert {String.insert}
+:string.pop {String.pop}
+:string.remove {String.remove}
 :string.drain {String.drain}
-:string.insert.index {String.insert}
+:string.capacity {String.capacity}
+:string.reserve {String.reserve String.reserve_exact}
+:string.shrink {String.shrink_to_fit}
+:string.truncate {String.truncate}
+:string.clear {String.clear}
+:string.lowercase {str.to_lowercase}
+:string.uppercase {str.to_uppercase}
+:string.compare {str.cmp}
+:string.equal {str.== str.eq_ignore_ascii_case}
+:string.not_equal {str.!=}
+:string.greater {str.>}
+:string.greater_or_equal {str.>=}
+:string.less {str.<}
+:string.less_or_equal {str.<=}
 :string.is_ascii {str.is_ascii}
 :string.is_empty {str.is_empty String.is_empty}
 :string.length {str.len String.len}
-:string.remove.index {String.remove}
-:string.remove.last {String.pop}
-:string.replace.all {str.replace}
-:string.search {str.find}
-:string.search.reverse {str.rfind}
-:string.search.all {str.matches str.match_indices}
-:string.search.all.reverse {str.rmatches str.rmatch_indices}
-:string.search.exists {str.contains}
-:string.search.start {str.starts_with}
-:string.search.end {str.ends_with}
+:string.replace {str.replace}
+:string.search {str.find str.rfind str.matches str.rmatches str.match_indices str.rmatch_indices}
+:string.contains {str.contains}
+:string.starts_with {str.starts_with}
+:string.ends_with {str.ends_with}
 :string.slice {str.[] str.slice_unchecked str.slice_mut_unchecked}
-:string.split {str.split str.rsplit}
-:string.split.terminator {str.split_terminator str.rsplit_terminator}
-:string.split.limit {str.splitn str.rsplitn}
-:string.split.index {str.split_at str.split_at_mut}
-:string.split.chars {str.chars str.char_indices str.bytes}
-:string.split.words {str.split_whitespace}
-:string.split.lines {str.lines}
+:string.split {str.split str.rsplit str.split_terminator str.rsplit_terminator str.splitn str.rsplitn}
+:string.split_at {str.split_at str.split_at_mut}
+:string.characters {str.chars str.char_indices str.bytes}
+:string.words {str.split_whitespace}
+:string.lines {str.lines}
 :string.trim {str.trim str.trim_matches}
-:string.trim.left {trim_left trim_left_matches}
-:string.trim.right {trim_right trim_right_matches}
-:string.truncate {String.truncate}
-
+:string.trim_left {trim_left trim_left_matches}
+:string.trim_right {trim_right trim_right_matches}
