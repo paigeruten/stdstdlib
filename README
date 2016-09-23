@@ -1,0 +1,42 @@
+              stdstdlib
+              ~~~~~~~~~
+
+it's like rosetta code, but for smaller
+stuff. if you know how to do something
+in one language, you should be able to
+consult stdstdlib for how to do it in
+another language.
+
+for example, you want to convert a
+string to lowercase in ruby. you know
+how to do it in rust, it's
+to_lowercase(). so you ask stdstdlib:
+
+  $ stdstd rust:to_lowercase ruby
+  String#downcase
+    Ex: "FooBar".downcase #=> "foobar"
+
+and it tells you. it does this by seeing
+that rust's str.to_lowercase() is in the
+string.is_lowercase bucket, and then
+checking for any ruby methods that are
+in that same bucket.
+
+if a language doesn't implement a simple
+method for a particular bucket, then
+there should eventually be an idiom or
+longer example code of how to do that
+operation:
+
+  $ stdstd string.split_index ruby
+  Idiom: [str[0...idx], str[idx..-1]]
+
+standard.lum will contain the union of
+all supported languages' standard
+libraries. every function/method/
+subroutine provided by each language's
+stdlib will have a corresponding
+standard.lum entry. then, each language
+file will strive to provide example code
+for each standard standard library task.
+

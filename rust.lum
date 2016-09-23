@@ -1,39 +1,75 @@
-section=Sym calls=[Sym] example(s)=Str?
+bucket=Sym call=Sym example=Str?
 
-:string.append {String.push_str}
-:string.push {String.push}
-:string.insert {String.insert}
-:string.pop {String.pop}
-:string.remove {String.remove}
-:string.drain {String.drain}
-:string.capacity {String.capacity}
-:string.reserve {String.reserve String.reserve_exact}
-:string.shrink {String.shrink_to_fit}
-:string.truncate {String.truncate}
-:string.clear {String.clear}
-:string.lowercase {str.to_lowercase}
-:string.uppercase {str.to_uppercase}
-:string.compare {str.cmp}
-:string.equal {str.== str.eq_ignore_ascii_case}
-:string.not_equal {str.!=}
-:string.greater {str.>}
-:string.greater_or_equal {str.>=}
-:string.less {str.<}
-:string.less_or_equal {str.<=}
-:string.is_ascii {str.is_ascii}
-:string.is_empty {str.is_empty String.is_empty}
-:string.length {str.len String.len}
-:string.replace {str.replace}
-:string.search {str.find str.rfind str.matches str.rmatches str.match_indices str.rmatch_indices}
-:string.contains {str.contains}
-:string.starts_with {str.starts_with}
-:string.ends_with {str.ends_with}
-:string.slice {str.[] str.slice_unchecked str.slice_mut_unchecked}
-:string.split {str.split str.rsplit str.split_terminator str.rsplit_terminator str.splitn str.rsplitn}
-:string.split_at {str.split_at str.split_at_mut}
-:string.characters {str.chars str.char_indices str.bytes}
-:string.words {str.split_whitespace}
-:string.lines {str.lines}
-:string.trim {str.trim str.trim_matches}
-:string.trim_left {trim_left trim_left_matches}
-:string.trim_right {trim_right trim_right_matches}
+:string.capacity :String#capacity
+:string.clear :String#clear
+:string.compare :str#cmp
+:string.compare :str#<
+:string.compare :str#<=
+:string.compare :str#>
+:string.compare :str#>=
+:string.concatenate :String#+
+:string.contains_character :str#contains
+:string.contains_string :str#contains
+:string.ends_with :str#ends_with
+:string.equal :str#==
+:string.equal_ignore_case :str#eq_ignore_ascii_case
+:string.is_ascii :str#is_ascii
+:string.is_empty :str#is_empty
+:string.length :str#len
+:string.find_character :str#find
+:string.find_character :str#matches
+:string.find_character :str#match_indices
+:string.find_character_reverse :str#rfind
+:string.find_character_reverse :str#rmatches
+:string.find_character_reverse :str#rmatch_indices
+:string.find_string :str#find
+:string.find_string :str#matches
+:string.find_string :str#match_indices
+:string.find_string_reverse :str#rfind
+:string.find_string_reverse :str#rmatches
+:string.find_string_reverse :str#rmatch_indices
+:string.insert_character :String#insert
+:string.interpolate :macro.format!
+:string.new :String.new
+:string.new_with_capacity :String.with_capacity
+:string.pop :String#pop
+:string.push_character :String#push
+:string.push_character :String#extend
+:string.push_string :String#push_str
+:string.push_string :String#extend
+:string.remove_index :String#remove
+:string.remove_range :String#drain
+:string.replace_all :str#replace
+:string.reserve :String#reserve
+:string.reserve :String#reserve_exact
+:string.shrink :String#shrink_to_fit
+:string.slice :str#[]
+:string.slice :str#slice_unchecked
+:string.slice :str#slice_mut_unchecked
+:string.split :str#split
+:string.split :str#rsplit
+:string.split_bytes :str#bytes
+:string.split_characters :str#chars
+:string.split_characters :str#char_indices
+:string.split_limit :str#splitn
+:string.split_limit :str#rsplitn
+:string.split_lines :str#lines
+:string.split_terminator :str#split_terminator
+:string.split_terminator :str#rsplit_terminator
+:string.split_whitespace :str#split_whitespace
+:string.split_index :str#split_at
+:string.split_index :str#split_at_mut
+:string.starts_with :str#starts_with
+:string.to_lowercase :str#to_lowercase
+:string.to_lowercase :str#to_ascii_lowercase
+:string.to_lowercase :str#make_ascii_lowercase
+:string.to_uppercase :str#to_uppercase
+:string.to_uppercase :str#to_ascii_uppercase
+:string.to_uppercase :str#make_ascii_uppercase
+:string.trim :str#trim_matches
+:string.trim_left :str#trim_left_matches
+:string.trim_right :str#trim_right_matches
+:string.trim_whitespace :str#trim
+:string.trim_whitespace_left :str#trim_left
+:string.trim_whitespace_right :str#trim_right
+:string.truncate :String#truncate

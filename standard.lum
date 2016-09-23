@@ -1,40 +1,80 @@
-section=Sym desc=Str
+bucket=Sym
 
-:string | String operations
-:string.append | Append to the end of the string
-:string.push | Append a character to the end of the string
-:string.insert | Insert a character into the string
-:string.pop | Remove the last character from the string
-:string.remove | Remove a character from the string
-:string.drain | Get an iterator that both yields and deletes characters from the string
-:string.capacity | Get amount of space allocated for the string
-:string.reserve | Allocate some more space for the string
-:string.shrink | Free up space not being used by the string
-:string.truncate | Set a new length for the string, throwing away the characters that no longer fit
-:string.clear | Empty the string
-:string.lowercase | Convert string to lowercase
-:string.uppercase | Convert string to uppercase
-:string.compare | Check whether a string is equal to, less than, or greater than another string
-:string.equal | Check whether a string is equal to another string
-:string.not_equal | Check whether a string is not equal to another string
-:string.greater | Check whether a string is greater than another string
-:string.greater_or_equal | Check whether a string is greater than or equal to another string
-:string.less | Check whether a string is less than another string
-:string.less_or_equal | Check whether a string is less than or equal to another string
-:string.is_ascii | Check whether the string is only made up of ASCII characters
-:string.is_empty | Check whether the string is empty
-:string.length | Get the length of the string
-:string.replace | Replace a matching substring with another string
-:string.search | Find a matching substring within the string
-:string.contains | Check whether the string contains a matching substring
-:string.starts_with | Check whether the string starts with a certain substring or pattern
-:string.ends_with | Check whether the string ends with a certain substring or pattern
-:string.slice | Get a substring of the string
-:string.split | Split the string into multiple parts
-:string.split_at | Split the string into two parts
-:string.characters | Split the string into its individual characters
-:string.words | Split the string by whitespace
-:string.lines | Split the string by newlines
-:string.trim | Remove unwanted characters from the beginning and end of the string
-:string.trim_left | Remove unwanted characters from the beginning of the string
-:string.trim_right | Remove unwanted characters from the end of the string
+:string.capacity
+:string.capitalize
+:string.clear
+:string.center
+:string.checksum
+:string.compare
+:string.concatenate
+:string.contains_character
+:string.contains_string
+:string.count
+:string.cryptographic_hash
+:string.ends_with
+:string.equal
+:string.equal_ignore_case
+:string.find_character
+:string.find_character_reverse
+:string.find_string
+:string.find_string_reverse
+:string.hash
+:string.index
+:string.index_byte
+:string.insert_character
+:string.insert_string
+:string.interpolate
+:string.is_ascii
+:string.is_empty
+:string.left_justify
+:string.length
+:string.length_bytes
+:string.new
+:string.new_with_capacity
+:string.partition
+:string.partition_reverse
+:string.pop
+:string.push_character
+:string.push_string
+:string.remove_characters
+:string.remove_index
+:string.remove_range
+:string.repeat
+:string.replace
+:string.replace_all
+:string.reserve
+:string.reverse
+:string.right_justify
+:string.scrub
+:string.set_index
+:string.set_index_byte
+:string.shrink
+:string.slice
+:string.split
+:string.split_bytes
+:string.split_characters
+:string.split_limit
+:string.split_lines
+:string.split_paragraphs
+:string.split_terminator
+:string.split_whitespace
+:string.split_index
+:string.squeeze
+:string.starts_with
+:string.successor
+:string.successors
+:string.supplant
+:string.swap_case
+:string.to_lowercase
+:string.to_uppercase
+:string.translate
+:string.translate_squeeze
+:string.trim
+:string.trim_left
+:string.trim_right
+:string.trim_whitespace
+:string.trim_whitespace_left
+:string.trim_whitespace_right
+:string.truncate
+:string.unshift_character
+:string.unshift_string
